@@ -32,9 +32,8 @@ else:
     total = 0
 
 def convert_df_to_json(df):
-    # Convert DataFrame to JSON with indentation
     json_data = df.to_json(orient="records")
-    formatted_json = json.dumps(json.loads(json_data), indent=4)  # Format JSON
+    formatted_json = json.dumps(json.loads(json_data), indent=4)
     return formatted_json
 
 if st.button("Scrape Google Maps"):
@@ -68,7 +67,6 @@ if 'result_df' in st.session_state:
         result_df.to_excel(excel_data, index=False, engine='openpyxl')
         json_data = convert_df_to_json(result_df)
 
-        # Create columns for download options and button
         col1, col2 = st.columns(2)
 
         with col1:
