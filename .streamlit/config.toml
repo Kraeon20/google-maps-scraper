@@ -1,0 +1,10 @@
+[theme]
+base="light"
+
+[server]
+enableCORS=false
+enableXsrfProtection=false
+
+[global]
+hideToolbar=true
+hideFooter=true
